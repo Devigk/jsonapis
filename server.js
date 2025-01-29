@@ -8,7 +8,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Your cardData object
-const cardData = [
+const cardData = {
     "rails generate model ModelName": "Creates a model with the specified model_name",
     "rails generate migration MigrationName": "Creates a migration with the specified migration_name",
     "rails generate controller ControllerName": "Creates a controller with the specified controller_name",
@@ -31,7 +31,7 @@ const cardData = [
     "rake routes": "Prints out all the defined routes in match order with names",
     "rake tmp:clear": "Clears session, cache and socket files from tmp/",
     "rake test:benchmark": "Benchmarks your application"
-];
+};
 
 // Define the route to serve the cardData
 app.get('/api/commands', (req, res) => {
